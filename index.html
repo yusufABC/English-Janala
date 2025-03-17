@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Janala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    .poppins{
+  font-family: "Poppins", sans-serif;
+}
+</style>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body>
+<body class="poppins">
     <header>
         <nav class="w-11/12 mx-auto flex justify-between py-3">
             <div class="flex items-center">
@@ -24,6 +33,20 @@
         </nav>
         <hr class="text-gray-400">
      </header>
+     <!-- hero section  -->
+     <section class="mt-10">
+        <div class="w-11/12 mx-auto flex justify-center items-center py-3 gap-10">
+            <div class="w-3/5 space-y-5">
+                <h3 class="text-3xl font-bold "><span class="text-[#00BCFF] font-bold">English</span> is Easy!!</h3>
+                <p>আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ </p>
+                <input type="text" placeholder="Enter Your Name" class="input input-sm focus:outline-none" />
+                <input type="password" placeholder="Enter Passowrd" class="input input-sm focus:outline-none" />
+            </div>
+            <div>
+                <img src="assets/hero-student.png" class="w-4/5" alt="">
+            </div>
+        </div>
+     </section>
     <script src="js/script.js"></script>
 </body>
 </html>
