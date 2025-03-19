@@ -11,10 +11,12 @@
     .poppins{
   font-family: "Poppins", sans-serif;
 }
+html {
+      scroll-behavior: smooth; /* Smooth scrolling */
+    }
 </style>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
 </head>
 <body class="poppins">
     <header>
@@ -26,27 +28,118 @@
            
             
             <div class="space-x-2">
-                <button  class="btn text-[#422AD5] border-[#422AD5 font-bold border-[#422AD5]"><img src="assets/fa-circle-question.png" alt=""> FAQ<button>
-                <button  class="btn text-[#422AD5] border-[#422AD5 font-bold border-[#422AD5]"><img src="assets/fa-book-open.png" alt="">Learn<button>
-                    <button  class="btn text-[#422AD5] border-[#422AD5 font-bold border-[#422AD5] "><img src="assets/fa-arrow-right-from-bracket.png" alt="">Logout<button>
+                <a href="#section1" class="btn text-[#422AD5] font-bold border-[#422AD5]">
+                    <img src="assets/fa-circle-question.png" alt=""> FAQ
+                </a>
+                <a href="#section2" class="btn text-[#422AD5] font-bold border-[#422AD5]">
+                    <img src="assets/fa-book-open.png" alt=""> Learn
+                </a>
+                <button class="btn text-[#422AD5]  font-bold border-[#422AD5]">
+                    <img src="assets/fa-arrow-right-from-bracket.png" alt=""> Logout
+                </button>
+                
             </div>
         </nav>
         <hr class="text-gray-400">
      </header>
      <!-- hero section  -->
      <section class="mt-10">
-        <div class="w-11/12 mx-auto flex justify-center items-center py-3 gap-10">
+        <div class="w-11/12 mx-auto flex flex-col md:flex-row justify-center items-center py-3 gap-10">
             <div class="w-3/5 space-y-5">
                 <h3 class="text-3xl font-bold "><span class="text-[#00BCFF] font-bold">English</span> is Easy!!</h3>
                 <p>আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ </p>
                 <input type="text" placeholder="Enter Your Name" class="input input-sm focus:outline-none" />
                 <input type="password" placeholder="Enter Passowrd" class="input input-sm focus:outline-none" />
+                <div>
+                    <button class="btn bg-[#422AD5] text-white rounded-xl ">Get Started<button>
+
+                </div>
             </div>
             <div>
                 <img src="assets/hero-student.png" class="w-4/5" alt="">
             </div>
         </div>
      </section>
+     <!-- vocabulary section  -->
+      <section class="mt-10">
+        <h3 class="text-2xl font-bold text-center"><span class="text-[#00BCFF] font-bold">Let's </span>Learn Vocabulary</h3>
+        <div id="vocabulary-container" class="flex justify-center items-center gap-5 my-10">
+            <div id="vocdiv">
+            
+            </div>
+
+
+            
+        </div>
+        <div id="vocabulary-card-container" class="bg-gray-100 grid grid-cols-4 gap-5 w-11/12 mx-auto rounded-xl">
+               
+         
+
+        </div>
+
+        
+      </section>
+
+      <!-- faq section  -->
+       <section id="section1" class="mt-10 space-y-10">
+        <h3 class="text-2xl font-bold text-center"><span class="text-[#00BCFF] font-bold">Frequently</span> Asked Question</h3>
+        <div class="w-11/12 mx-auto">
+            <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" checked="checked" />
+                <div class="collapse-title font-semibold"> the difference between var, let, and const
+
+                </div>
+                <div class="collapse-content text-sm">var has function scope, is hoisted with undefined, and allows reassignment. let has block scope, is hoisted without initialization, and allows reassignment. const has block scope, is hoisted without initialization, and cannot be reassigned. Avoid var; prefer let and const.</div>
+              </div>
+              <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title font-semibold"> the difference between map(), forEach(), and filter()</div>
+                <div class="collapse-content text-sm">map() creates a new array by transforming each element. forEach() loops through elements but doesn’t return a new array. filter() creates a new array with elements that meet a condition.</div>
+              </div>
+              <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title font-semibold"> explain arrow functions and how they are different from regular functions</div>
+                <div class="collapse-content text-sm">Arrow functions are shorter syntax for functions. making them ideal for callbacks but unsuitable for methods needing this.</div>
+              </div>
+              <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title font-semibold">H how JavaScript Promises work</div>
+                <div class="collapse-content text-sm">JavaScript Promises handle asynchronous tasks. They have three states: **pending**, **fulfilled**, or **rejected**. Use `.then()` for success, `.catch()` for errors, and `.finally()` for cleanup after completion.</div>
+              </div>
+              <div class="collapse bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title font-semibold"> how closures work in JavaScript</div>
+                <div class="collapse-content text-sm">Closures occur when a function retains access to its lexical scope (variables) even after the outer function has finished executing, allowing the inner function to use those variables later..</div>
+              </div>
+        </div>
+       </section>
+
+       <!-- footer section  -->
+        <footer class="my-10 space-y-6">
+            <hr class="text-orange-400">
+            <div class="flex w-11/12 mx-auto justify-between items-center">
+            <div>
+                <div class="flex items-center">
+                
+                    <span class="font-bold">English</span><img class="" src="assets/logo.png" alt=""><span>জানালা</span>
+                </div>
+                <p>ইংরেজি শিখুন সহজে</p>
+                <p class="text-xs">Providing ED-Tech Applications since 2025</p>
+               
+            </div>
+            <div >
+                <p class="text-xs my-4">
+                    Follow Us
+                </p>
+                <div class="flex gap-3 justify-center items-center">
+                    <img src="assets/instagram-thumb.png" alt="">
+                    <img src="assets/fb-thumb.png" alt="">
+                    <img src="assets/youtube-thumb.png" alt="">
+                </div>
+               
+            </div>
+        </div>
+        </footer>
     <script src="js/script.js"></script>
 </body>
-</html>
+</html>     
