@@ -14,6 +14,10 @@
 html {
       scroll-behavior: smooth; /* Smooth scrolling */
     }
+    .active{
+        background: #422AD5;
+        color:white
+    }
 </style>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -34,9 +38,9 @@ html {
                 <a href="#section2" class="btn text-[#422AD5] font-bold border-[#422AD5]">
                     <img src="assets/fa-book-open.png" alt=""> Learn
                 </a>
-                <button class="btn text-[#422AD5]  font-bold border-[#422AD5]">
+                <buttobn class="btn text-[#422AD5]  font-bold border-[#422AD5]">
                     <img src="assets/fa-arrow-right-from-bracket.png" alt=""> Logout
-                </button>
+                </buttobn>
                 
             </div>
         </nav>
@@ -61,7 +65,7 @@ html {
         </div>
      </section>
      <!-- vocabulary section  -->
-      <section class="mt-10">
+      <section id="section2" class="mt-10">
         <h3 class="text-2xl font-bold text-center"><span class="text-[#00BCFF] font-bold">Let's </span>Learn Vocabulary</h3>
         <div id="vocabulary-container" class="flex justify-center items-center gap-5 my-10">
             <div id="vocdiv">
@@ -72,12 +76,30 @@ html {
             
         </div>
         <div id="vocabulary-card-container" class="bg-gray-100 grid grid-cols-4 gap-5 w-11/12 mx-auto rounded-xl">
-               
+            <div class="col-span-full mx-auto flex justify-center flex-col items-center py-10 space-y-4 ">
+                <p class="text-xs">আপনি এখনো কোন Lesson Select করেন ন</p>
+              <h2 class="text-xl font-bold">একটি Lesson Select করুন।</h2>
+          </div>
          
 
         </div>
 
-        
+        <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="card_details" class="modal ">
+  <div class="modal-box ">
+    <div id="details-container" class="space-y-4 w-11/12 ">
+
+       
+    </div>
+    <div class="mt-5">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-md bg-blue-700 text-white">Complete Learning</button>
+      </form>
+    </div>
+  </div>
+</dialog>
       </section>
 
       <!-- faq section  -->
@@ -113,7 +135,7 @@ html {
               </div>
         </div>
        </section>
-
+       
        <!-- footer section  -->
         <footer class="my-10 space-y-6">
             <hr class="text-orange-400">
