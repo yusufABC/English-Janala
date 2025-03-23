@@ -1,4 +1,48 @@
 
+// add hide 
+const header=document.getElementById("header")
+header.style.display="none"
+const vocabulary=document.getElementById("section2")
+vocabulary.style.display="none"
+const faq=document.getElementById("section1")
+faq.style.display="none"
+const hero=document.getElementById("hero")
+
+
+// add 
+const inputpass=()=>{
+    const inputPassword=document.getElementById("input-pass").value
+    
+    if (inputPassword === "123456") { 
+        header.style.display = "block";
+        vocabulary.style.display="block"
+        faq.style.display="block"
+        hero.style.display="none"
+
+
+    } else {
+        alert("Incorrect Password!"); 
+    }
+};
+
+
+const logout=()=>{
+        
+    
+       if (header) header.style.display = "none";
+       if (vocabulary) vocabulary.style.display="none"
+       if(faq) faq.style.display="none"
+       if (hero) hero.style.display="block"
+
+
+
+}
+
+// loader work 
+
+
+
+
 const removeActive=()=>{
     const activeButtons=document.getElementsByClassName("active")
   for(let btn of activeButtons){
@@ -62,6 +106,8 @@ const loadCardDetails=async (id)=>{
 
 
 const loadVocBtn =async ()=>{
+
+
     let res=await fetch("https://openapi.programming-hero.com/api/levels/all")
     let res1=await res.json()
     // console.log(res1)
@@ -70,11 +116,11 @@ const loadVocBtn =async ()=>{
   
     displayVoc(index)
  
-
 }
 
 
 const loadVocCard =async()=>{
+    
     let res2 =await fetch("https://openapi.programming-hero.com/api/levels/all")
     let response=await res2.json()
     let index1=response.data
@@ -83,10 +129,12 @@ const loadVocCard =async()=>{
     displayVocabsCards(index1)
 
     addActive(id)
+
     
 }
 
 const loadCategoryCard=(id)=>{
+
     const url=`https://openapi.programming-hero.com/api/level/${id}`
     console.log(url)
     fetch(url)
@@ -173,8 +221,10 @@ if (!Array.isArray(firstVocabs) || firstVocabs.length === 0) {
         vocaCardContainer.append(vocaCardDiv)
     }) 
    
+    hideLoader()
 
 }
+
 
 loadVocBtn()
 // loadVocCard()

@@ -23,7 +23,7 @@ html {
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="poppins">
-    <header>
+    <header id="header">
         <nav class="w-11/12 mx-auto flex justify-between py-3">
             <div class="flex items-center">
                 
@@ -38,24 +38,27 @@ html {
                 <a href="#section2" class="btn text-[#422AD5] font-bold border-[#422AD5]">
                     <img src="assets/fa-book-open.png" alt=""> Learn
                 </a>
-                <buttobn class="btn text-[#422AD5]  font-bold border-[#422AD5]">
+                <button onclick="logout()" class="btn text-[#422AD5]  font-bold border-[#422AD5]">
                     <img src="assets/fa-arrow-right-from-bracket.png" alt=""> Logout
-                </buttobn>
+                </button>
                 
             </div>
         </nav>
         <hr class="text-gray-400">
+    
      </header>
+
+
      <!-- hero section  -->
-     <section class="mt-10">
+     <section class="mt-10" id="hero">
         <div class="w-11/12 mx-auto flex flex-col md:flex-row justify-center items-center py-3 gap-10">
             <div class="w-3/5 space-y-5">
                 <h3 class="text-3xl font-bold "><span class="text-[#00BCFF] font-bold">English</span> is Easy!!</h3>
                 <p>আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ </p>
                 <input type="text" placeholder="Enter Your Name" class="input input-sm focus:outline-none" />
-                <input type="password" placeholder="Enter Passowrd" class="input input-sm focus:outline-none" />
+                <input  type="password" placeholder="Enter Passowrd" class="input input-sm focus:outline-none " id="input-pass" />
                 <div>
-                    <button class="btn bg-[#422AD5] text-white rounded-xl ">Get Started<button>
+                    <button onclick="inputpass()" class="btn bg-[#422AD5] text-white rounded-xl ">Get Started</button>
 
                 </div>
             </div>
@@ -65,7 +68,7 @@ html {
         </div>
      </section>
      <!-- vocabulary section  -->
-      <section id="section2" class="mt-10">
+      <section id="section2" class="mt-10 hidden">
         <h3 class="text-2xl font-bold text-center"><span class="text-[#00BCFF] font-bold">Let's </span>Learn Vocabulary</h3>
         <div id="vocabulary-container" class="flex justify-center items-center gap-5 my-10">
             <div id="vocdiv">
